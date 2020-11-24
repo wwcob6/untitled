@@ -7,13 +7,17 @@
 </head>
 <body>
 <div id="app">{{content}}</div>
+
 <script>
-    var app = new Vue({
-        el: '#app',
+    let app = new Vue({
+        el: '#app', //实例负责管理的区域
         data:{
             content:'hello world'
         }
     })
+    setTimeout(function () {
+        app.$data.content = '?';
+    },2000)
 </script>
 </body>
 </html>
