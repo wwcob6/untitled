@@ -11,22 +11,27 @@
     <button v-on:click="onClickListener">点击</button>
     <ul>
         <todo-item v-for="item in list"
-        v-bind:content = "item">
+                   v-bind:content = "item">
 
         </todo-item>
     </ul>
 </div>
 <script>
-    //注册一个局部变量
-    let TodoItem = {
+    //注册一个局部组件
+    /*let TodoItem = {
         props:['content'],
         template: "<li>{{content}}</li>"
-    }
+    }*/
+    //全局组件
+    Vue.component("TodoItem",{
+        props:['content'],
+        template: "<li>{{content}}</li>"
+    });
     //注册一个Vue的实例
     let app = new Vue({
-        components:{
+        /*components:{
             TodoItem:TodoItem
-        },
+        },*/
         el: '.app',
         data:{
             list:[],
