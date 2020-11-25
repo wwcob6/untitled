@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div class="app">
+    <input type="text" v-model = "inputValue"/>
+    <button v-on:click="onClickListener">点击</button>
+    <ul>
+        <todo-item v-for="item in list"
+        v-bind:content = "item">
+
+        </todo-item>
+    </ul>
+</div>
+<script>
+    //注册一个局部变量
+    let TodoItem = {
+        props:['content'],
+        template: "<li>{{content}}</li>"
+    }
+    //注册一个Vue的实例
+    let app = new Vue({
+        components:{
+            TodoItem:TodoItem
+        },
+        el: '.app',
+        data:{
+            list:[],
+            inputValue:''
+        },
+        methods:{
+            onClickListener:function () {
+                this.list.push(this.inputValue);
+                this.inputValue='';
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -6,18 +6,46 @@
     <script src="vue.js"></script>
 </head>
 <body>
-<div id="app">{{content}}</div>
+<div id="app">
+    <input type="text" v-model = "inputValue"/>
+    <button v-on:click="BtnClick">点击</button>
+    <ul>
+        <!--<li v-for="item in list">{{item}}</li>-->
+        <!--将item用 v-bind 传给 todo-item，通过 content 传-->
+        <todo-item v-bind:content="item"
+                   v-for="item in list">
+            {{item}}
+        </todo-item>
+    </ul>
+</div>
 
 <script>
+    /*全局组件
+    Vue.component("TodoItem",{
+        props:['content'],
+        template:"<li>{{content}}</li>" //写一个模板
+    })*/
+    let TodoItem = {
+        props:['content'],
+        template:"<li>{{content}}</li>" //写一个模板
+    }
     let app = new Vue({
         el: '#app', //实例负责管理的区域
+        components:{
+            TodoItem: TodoItem
+        },
         data:{
-            content:'hello world'
+            list:[],
+            inputValue:''
+        },
+        methods:{
+            BtnClick: function () {
+                this.list.push(this.inputValue);
+                this.inputValue = '';
+            }
         }
     })
-    setTimeout(function () {
-        app.$data.content = '?';
-    },2000)
+
 </script>
 </body>
 </html>
