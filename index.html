@@ -8,12 +8,14 @@
 <body>
 <div id="app">
     <input type="text" v-model = "inputValue"/>
-    <button v-on:click="BtnClick">点击</button>
+    <button @click="BtnClick">点击</button>
     <ul>
         <!--<li v-for="item in list">{{item}}</li>-->
         <!--将item用 v-bind 传给 todo-item，通过 content 传-->
         <todo-item v-bind:content="item"
-                   v-for="item in list">
+                   v-bind:index="index"
+                   v-for="(item, index) in list"
+                   @delete = "handleItemDelete">
             {{item}}
         </todo-item>
     </ul>
@@ -26,8 +28,13 @@
         template:"<li>{{content}}</li>" //写一个模板
     })*/
     let TodoItem = {
-        props:['content'],
-        template:"<li>{{content}}</li>" //写一个模板
+        props:['content','index'],
+        template:"<li @click='itemClick'>{{content}}</li>",
+        methods: {
+            itemClick:function () {
+                this.$emit("delete",this.index);
+            }
+        }w
     }
     let app = new Vue({
         el: '#app', //实例负责管理的区域
@@ -42,6 +49,9 @@
             BtnClick: function () {
                 this.list.push(this.inputValue);
                 this.inputValue = '';
+            },
+            handleItemDelete:function (index) {
+                this.list.splice(index,1);
             }
         }
     })
