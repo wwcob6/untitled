@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue样式绑定</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .activated{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div @click="handleDivClick"
+        :class="{activated: isActivated}"
+    >由activated决定</div>
+    <div @click="handleDivClickSecond"
+         :class="[activatedSecond]"
+    >由data里的activatedSecond内容</div>
+    <div :style="styleObj"
+    @click="activatedThird">
+        通过div内的:style = data内数据
+    </div>
+    <div :style="[styleObj ]"
+         @click="activatedThird">
+        通过div内的:style
+    </div>
+</div>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            isActivated: false,
+            activatedSecond:"",
+            styleObj:{
+                color:"black"
+            },
+            styleObj2:{
+                color:"black"
+            }
+        },
+        methods:{
+            handleDivClick:function () {
+                this.isActivated = !this.isActivated;
+            },
+            handleDivClickSecond:function () {
+                /*if (this.activatedSecond ==="activated"){
+                    this.activatedSecond = ""
+                }
+                this.activatedSecond = "activated"*/
+                this.activatedSecond = this.activatedSecond ===  "activated" ?
+                    "" : "activated";
+            },
+            activatedThird:function () {
+                this.styleObj.color = this.styleObj.color ===  "black" ?
+                    "red" : "black";
+            }
+        }
+    })
+</script>
+</body>
+</html>

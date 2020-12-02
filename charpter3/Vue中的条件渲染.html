@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的条件渲染</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="show">{{message}}</div>
+    <div v-else="show">Hello Zhou</div>
+    <div v-show="show">{{message}}</div>
+    <div v-if="show">
+        请输入用户名：<input type="text" key="userName">
+    </div>
+    <div v-else>
+        请输入密码：<input type="text" key="password">
+    </div>
+    <div></div>
+</div>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            show: false,
+            message: "Hello Zhou"
+        }
+    })
+</script>
+</body>
+</html>
