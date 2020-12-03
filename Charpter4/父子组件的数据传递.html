@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue父子组件的数据传递</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <counter :count="1" @total="handleCount"></counter>
+    <counter :count="2"@total="handleCount"></counter>
+    <div>{{total}}</div>
+</div>
+<script>
+    let counter = {
+        props:['count'],
+        data: function(){
+            return {
+                number: this.count
+            }
+        },
+        template:'<div @click="countClick" >{{number}}</div>',
+        methods:{
+            countClick:function () {
+                this.number ++;
+                this.$emit("total",1);
+            }
+        }
+    }
+
+    let vm = new Vue({
+        el:"#app",
+        components:{
+            counter:counter
+        },
+        data:{
+            total: 3
+        },
+        methods: {
+            handleCount:function (number) {
+                this.total += number
+            }
+        }
+    })
+</script>
+</body>
+</html>

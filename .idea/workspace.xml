@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9902ba1d-4359-4a0a-833d-ad7625312a03" name="Default Changelist" comment="12/1">
-      <change afterPath="$PROJECT_DIR$/Charpter4/组件使用中的细节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter3/Vue中的列表渲染.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter3/Vue中的条件渲染.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter3/Vue样式绑定.html" afterDir="false" />
+    <list default="true" id="9902ba1d-4359-4a0a-833d-ad7625312a03" name="Default Changelist" comment="12/2">
+      <change afterPath="$PROJECT_DIR$/Charpter4/父子组件的数据传递.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/charpter3/组件参数校验与非props特性.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charpter4/组件使用中的细节点.html" beforeDir="false" afterPath="$PROJECT_DIR$/Charpter4/组件使用中的细节点.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606831181414</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="12/2">
+      <created>1606919174910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606919174910</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +120,8 @@
     <MESSAGE value="day2" />
     <MESSAGE value="11/30" />
     <MESSAGE value="12/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/1" />
+    <MESSAGE value="12/2" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="312" key="Github.ShareDialog" timestamp="1606235096097">
@@ -129,11 +136,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="59" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606234591148" />
-    <state x="963" y="200" key="Vcs.Push.Dialog.v2" timestamp="1606831183031">
+    <state x="963" y="200" key="Vcs.Push.Dialog.v2" timestamp="1606919176548">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="722" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606235495305" />
-    <state x="963" y="200" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1606831183031" />
+    <state x="963" y="200" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1606919176548" />
     <state x="958" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606235428119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

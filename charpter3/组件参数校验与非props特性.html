@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件参数校验与非props特性  绑定原生事件</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child content="hello world"></child>
+    </div>
+    <script>
+        Vue.component('child',{
+            props: {
+                content: String
+            },
+            template:'<div>{{content}}</div>'
+        })
+        let vm = new Vue({
+            el: "#app"
+        })
+    </script>
+</body>
+</html>
