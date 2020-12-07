@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画封装</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--<transition name="fade"><div v-if="show">
+        hello world</div>
+    </transition>-->
+    <fade :show="show">
+        <div>hello world</div>
+    </fade>
+    <button @click="switchDiv">change</button>
+</div>
+<script>
+    Vue.component('fade',{
+        props:['show'],
+        template:`<transition
+            @before-enter="handleBeforeEnter"
+            @enter="handleEnter">
+    <slot v-if="show"></slot>
+    </transition>`,
+        methods: {
+            handleBeforeEnter: function f(el) {
+                el.style.color = "red"
+            },
+            handleEnter:function (el,done) {
+                setTimeout(()=>{
+                    el.style.color = "green";
+                    done()
+                },2000)
+            }
+        }
+    })
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            show:true
+        },
+        methods:{
+            switchDiv:function () {
+                this.show = !this.show;
+            }
+        }
+    })
+</script>
+</body>
+</html>

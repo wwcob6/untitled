@@ -19,18 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9902ba1d-4359-4a0a-833d-ad7625312a03" name="Default Changelist" comment="12/3">
-      <change afterPath="$PROJECT_DIR$/Charpter4/7作用域插槽.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter4/8动态组件与v-once指令.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter4/在Vue中使用插槽.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter4/非父子组件间传值.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-1原理.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-2在Vue中使用Animate.css.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-3在Vue中同时使用过渡和动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-4Vue中的Js动画与Velocity.js的结合.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-5Vue中多个元素或组件的过渡.html" afterDir="false" />
+    <list default="true" id="9902ba1d-4359-4a0a-833d-ad7625312a03" name="Default Changelist" comment="12/7">
+      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-6Vue中的列表过渡.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/charpter5Vue中css动画/5-7Vue中的动画封装.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charpter3/组件参数校验与非props特性.html" beforeDir="false" afterPath="$PROJECT_DIR$/charpter3/组件参数校验与非props特性.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -112,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607007000212</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="12/7">
+      <created>1607348663438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607348663438</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +135,8 @@
     <MESSAGE value="12/1" />
     <MESSAGE value="12/2" />
     <MESSAGE value="12/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/3" />
+    <MESSAGE value="12/7" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/7" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="312" key="Github.ShareDialog" timestamp="1606235096097">
@@ -147,15 +147,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="1013" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606235117062" />
-    <state x="540" y="59" key="SettingsEditor" timestamp="1606234591148">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="720" y="80" key="SettingsEditor" timestamp="1607352409926">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="540" y="59" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606234591148" />
-    <state x="963" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607007014067">
+    <state x="720" y="80" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1607352409926" />
+    <state x="963" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607348866768">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="722" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606235495305" />
-    <state x="963" y="200" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1607007014067" />
+    <state x="963" y="200" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1607348866768" />
     <state x="958" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606235428119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
