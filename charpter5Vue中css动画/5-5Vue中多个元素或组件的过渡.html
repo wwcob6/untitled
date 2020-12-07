@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中多个元素或组件的过渡</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .fade-enter, .fade-leave-to{
+            opacity: 0;
+        }
+        .fade-enter-active,.fade-leave-active{
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <transition mode="out-in"
+            name="fade"
+            >
+        <!--动态组件-->
+        <component :is="type"></component>
+        <!--<child-one v-if="show"></child-one>
+        <child-two v-else></child-two>-->
+    </transition>
+    <button @click="switchDiv">toggle</button>
+</div>
+
+<script>
+    Vue.component('child-one',{
+        template:`<div>child-one</div>`
+    });
+    Vue.component('child-two',{
+        template:`<div>child-two</div>`
+    })
+    let vm = new Vue({
+            el: "#app",
+            data:{
+                type:'child-one'
+            },
+            methods:{
+                switchDiv:function () {
+                    this.type = this.type === 'child-one'?
+                        'child-two' : 'child-one';
+                }
+            }
+        })
+</script>
+</body>
+</html>

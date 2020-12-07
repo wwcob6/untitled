@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-4Vue中的Js动画与Velocity.js的结合</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <transition
+            name="fade"
+            @before-enter="handleBeforeEnter"
+            @enter="handleEnter"
+            @after-enter="handleAfterEnter">
+<!--出场动画是@before-leave @leave @after-leavev -->
+
+        <div v-show="show">Hello World</div>
+    </transition>
+    <button @click="switchDiv">toggle</button>
+</div>
+
+<script>
+    let vm = new Vue({
+            el: "#app",
+            data:{
+                show:true
+            },
+            methods:{
+                switchDiv:function () {
+                    this.show = !this.show;
+                },
+                handleBeforeEnter:function (el) {
+                    //el是当前所指元素
+                    el.style.color = "red"
+                    el.style.opacity = "0";
+                },
+                handleEnter:function (el,done) {
+                    done()
+                },
+                handleAfterEnter:function (el) {
+                    Velocity(el,{opacity:1},{duration:1000})
+                }
+            }
+        })
+</script>
+</body>
+</html>

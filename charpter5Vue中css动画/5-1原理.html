@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中css动画原理</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .fade-enter, .fade-leave-to{
+            opacity: 0;
+        }
+        .fade-enter-active,.fade-leave-active{
+            transition: opacity 1s;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <transition name="fade"><div v-if="show">
+        hello world</div>
+    </transition>
+    <button @click="switchDiv">change</button>
+</div>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            show:true
+        },
+        methods:{
+            switchDiv:function () {
+                this.show = !this.show;
+            }
+        }
+    })
+</script>
+</body>
+</html>

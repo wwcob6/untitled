@@ -7,17 +7,25 @@
 </head>
 <body>
     <div id="app">
-        <child content="hello world"></child>
+        <child @click .native="handleItemClick"></child>
     </div>
     <script>
         Vue.component('child',{
-            props: {
-                content: String
-            },
-            template:'<div>{{content}}</div>'
+            template:'<div >Child</div>',
+            methods: {
+                /*handleClick:function () {
+                    alert("click1")
+                    this.$emit("item")
+                }*/
+            }
         })
         let vm = new Vue({
-            el: "#app"
+            el: "#app",
+            methods:{
+                handleItemClick:function () {
+                    alert("click")
+                }
+            }
         })
     </script>
 </body>

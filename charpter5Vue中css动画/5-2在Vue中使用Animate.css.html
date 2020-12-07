@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用Animate.css</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <transition name="fade"  enter-active-class="animate__animated animate__bounce"
+                leave-active-class="animate__animated animate__tada">
+        <div v-if="show">
+        hello world
+        </div>
+    </transition>
+    <button @click="switchDiv">change</button>
+</div>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            show:true
+        },
+        methods:{
+            switchDiv:function () {
+                this.show = !this.show;
+            }
+        }
+    })
+</script>
+</body>
+</html>
